@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/@hellouxpavel/cssanimation@latest/dist/cssanimation.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/@hellouxpavel/cssanimation@latest/dist/cssanimation-utility.min.css"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="src/output.css" rel="stylesheet" />
   <title>Jadoo</title>
@@ -13,7 +21,6 @@
     width: 100%;
     position: fixed;
     transition: .3s ease-in-out;
-    background: rgba(249, 250, 253, 0.192);
     }
     .menuopen{
     transition: .5s ease-in-out;
@@ -23,11 +30,11 @@
 <body class="bg-[#fffefe]">
     <header class="bg-[url('https://themewagon.github.io/jadoo/v1.0.0/assets/img/hero/hero-bg.svg')] bg-cover bg-center">
         <!--Mobil-->
-        <div class="container m-auto flex lg:hidden justify-between items-center py-10 px-5">
+        <div class="container m-auto flex lg:hidden justify-between items-center py-8 px-5">
             <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/logo.svg" alt="" />
             <a onclick="menuOpen()" class="fa-solid fa-bars text-2xl"></a>
         </div>
-        <div id="menubar" style="top: -100%" class="z-10 bg-[#f0f4f9] fixed top-0  w-full duration-600">
+        <div id="menubar" style="top: -100%" class="z-10 bg-[#f0f4f9] fixed top-0  w-full duration-500">
             <span onclick="menuOpen()" class="flex justify-end items-center px-3 text-3xl text-black cursor-pointer">x</span>
             <ul class="flex flex-col gap-5 py-5 px-5">
                 <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Service</a></li>
@@ -40,21 +47,23 @@
             </ul>
         </div>
         <!--Desktop-->
-        <div id="fixdesktop" class="container-full hidden mx-auto py-10 lg:px-32 lg:flex justify-between items-center">
-            <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/logo.svg" alt="" />
-            <ul class="flex flex-row justify-between items-center gap-8">
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Service</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Destination</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Booking</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Testimonial</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Login</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold border rounded-[5px] py-2 px-3 hover:bg-black duration-500 hover:text-white" href="">Sign Up</a></li>
-                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">En</a></li>
-            </ul>
+        <div id="fixdesktop">
+            <div class="container bg-[#f9fafd31] backdrop-blur-[4px] mx-auto hidden py-8 lg:flex justify-between items-center">
+                <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/logo.svg" alt="" />
+                <ul class="flex flex-row justify-between items-center gap-18">
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Service</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Destination</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Booking</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Testimonial</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Login</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold border rounded-[5px] py-2 px-3 hover:bg-black duration-500 hover:text-white" href="">Sign Up</a></li>
+                    <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">En</a></li>
+                </ul>
+            </div>
         </div>
         <!--Best Destinations around the world-->
         <div class="container m-auto flex flex-col lg:flex-row px-5 justify-between items-center">
-            <div class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6 pt-20">
                 <div class="flex flex-col gap-5 text-center lg:text-left">
                     <h6 class="text-[#df6951] text-[20px] font-extrabold">Best Destinations around the world</h6>
                     <h1 class="text-[#181e4b] text-5xl lg:text-7xl font-bold lg:w-[550px] font-serif">Travel, enjoy and live a new and full life</h1>
@@ -65,7 +74,7 @@
                         <a class="border-0 text-white bg-[#f1a501] hover:bg-[#cd8c01] duration-500 rounded-[10px] py-3 px-4 text-[18px] shadow-[rgba(241, 165, 1, 0.15)] shadow-2xl" href="">Find out more</a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <a class="border-0 text-white bg-[#df6951] hover:bg-[#be5945] duration-500 w-12 h-12 rounded-[50%] flex items-center justify-center text-[22px] shadow-[rgba(223, 105, 81, 0.3)] shadow-2xl" href="">⯈</a>
+                        <a class="border-0 text-white bg-[#df6951] hover:bg-[#be5945] duration-500 w-14 h-14 rounded-[50%] flex items-center justify-center text-[22px] shadow-[rgba(223, 105, 81, 0.3)] shadow-2xl cssanimation ca__fx-elasticPulse" href="">⯈</a>
                         <p class="text-[#5e6282] font-semibold">Play Demo</p>
                     </div>
                 </div>
@@ -245,11 +254,13 @@
             <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/5.png" alt=""></div>
         </div>
         <!--Form-->
-        <div class="container mx-auto flex flex-col gap-10 justify-center items-center my-30 bg-[#f9f6fd] py-30 px-5 rounded-tl-[100px] rounded-bl-[20px] rounded-br-[20px] rounded-tr-[20px]">
-            <h3 class="text-[#5e6282] text-2xl lg:text-3xl lg:w-[800px] text-center font-bold">Subscribe to get information, latest news and other interesting offers about Cobham</h3>
-            <div class="flex flex-col gap-5 lg:flex-row items-center">
-                <input class="bg-white w-full lg:w-[300px] py-3 px-2 outline-0 rounded-[10px] text-[#5e6282]" type="email" placeholder="📧 Enter email"/>
-                <button class="border-0 w-[70%] lg:w-[150px] py-3 bg-gradient-to-b from-[#FF946D] to-[#FF7D68] text-white rounded-[10px]">Subscribe</button>
+        <div class="px-5">
+            <div class="container mx-auto flex flex-col gap-10 justify-center items-center my-30 bg-[#f9f6fd] py-30 px-5 rounded-tl-[100px] rounded-bl-[20px] rounded-br-[20px] rounded-tr-[20px]">
+                <h3 class="text-[#5e6282] text-2xl lg:text-3xl lg:w-[800px] text-center font-bold">Subscribe to get information, latest news and other interesting offers about Cobham</h3>
+                <div class="flex flex-col gap-5 lg:flex-row items-center">
+                    <input class="bg-white w-full lg:w-[300px] py-3 px-2 outline-0 rounded-[10px] text-[#5e6282]" type="email" placeholder="📧 Enter email"/>
+                    <button class="border-0 w-[70%] lg:w-[150px] py-3 bg-gradient-to-b from-[#FF946D] to-[#FF7D68] text-white rounded-[10px] cssanimation ca__fx-elasticPulse">Subscribe</button>
+                </div>
             </div>
         </div>
     </main>
