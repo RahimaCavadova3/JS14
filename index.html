@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link href="src/output.css" rel="stylesheet" />
+  <title>Jadoo</title>
+  <style>
+    .fixdesktop{
+    width: 100%;
+    position: fixed;
+    transition: .3s ease-in-out;
+    background: rgba(249, 250, 253, 0.192);
+    }
+    .menuopen{
+    transition: .5s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-[#fffefe]">
+    <header class="bg-[url('https://themewagon.github.io/jadoo/v1.0.0/assets/img/hero/hero-bg.svg')] bg-cover bg-center">
+        <!--Mobil-->
+        <div class="container m-auto flex lg:hidden justify-between items-center py-10 px-5">
+            <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/logo.svg" alt="" />
+            <a onclick="menuOpen()" class="fa-solid fa-bars text-2xl"></a>
+        </div>
+        <div id="menubar" style="top: -100%" class="z-10 bg-[#f0f4f9] fixed top-0  w-full duration-600">
+            <span onclick="menuOpen()" class="flex justify-end items-center px-3 text-3xl text-black cursor-pointer">x</span>
+            <ul class="flex flex-col gap-5 py-5 px-5">
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Service</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Destination</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Booking</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Testimonial</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Login</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold border rounded-[5px] py-2 px-3 hover:bg-black duration-500 hover:text-white" href="">Sign Up</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">En</a></li>
+            </ul>
+        </div>
+        <!--Desktop-->
+        <div id="fixdesktop" class="container-full hidden mx-auto py-10 lg:px-32 lg:flex justify-between items-center">
+            <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/logo.svg" alt="" />
+            <ul class="flex flex-row justify-between items-center gap-8">
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Service</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Destination</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Booking</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Testimonial</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">Login</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold border rounded-[5px] py-2 px-3 hover:bg-black duration-500 hover:text-white" href="">Sign Up</a></li>
+                <li><a class="text-[#212832] hover:text-[#f1a501] font-semibold duration-300" href="">En</a></li>
+            </ul>
+        </div>
+        <!--Best Destinations around the world-->
+        <div class="container m-auto flex flex-col lg:flex-row px-5 justify-between items-center">
+            <div class="flex flex-col gap-6">
+                <div class="flex flex-col gap-5 text-center lg:text-left">
+                    <h6 class="text-[#df6951] text-[20px] font-extrabold">Best Destinations around the world</h6>
+                    <h1 class="text-[#181e4b] text-5xl lg:text-7xl font-bold lg:w-[550px] font-serif">Travel, enjoy and live a new and full life</h1>
+                    <p class="text-[#5e6282] text-[16px] font-semibold lg:w-[450px]">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+                </div>
+                <div class="flex lg:flex-row flex-col gap-6 items-center">
+                    <div>
+                        <a class="border-0 text-white bg-[#f1a501] hover:bg-[#cd8c01] duration-500 rounded-[10px] py-3 px-4 text-[18px] shadow-[rgba(241, 165, 1, 0.15)] shadow-2xl" href="">Find out more</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a class="border-0 text-white bg-[#df6951] hover:bg-[#be5945] duration-500 w-12 h-12 rounded-[50%] flex items-center justify-center text-[22px] shadow-[rgba(223, 105, 81, 0.3)] shadow-2xl" href="">⯈</a>
+                        <p class="text-[#5e6282] font-semibold">Play Demo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:order-1 -order-1">
+                <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/hero/hero-img.png" alt="" />
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--CATEGORY-->
+        <div class="container mx-auto text-center pt-30 px-5">
+            <p class="text-[#5e6282] text-[18px] font-semibold">CATEGORY</p>
+            <h2 class="text-[#14183e] text-4xl lg:text-5xl font-bold font-serif">We Offer Best Services</h2>
+        </div>
+
+        <div class="container mx-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-items-center gap-20 pt-20 px-5">
+            <div class="text-center">
+                <img class="mx-auto" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/category/icon1.png" alt="" />
+                <h5 class="text-[#14183e] text-xl font-semibold pb-5">Calculated Weather</h5>
+                <p class="text-[#5e6282] text-[16px] font-semibold">Built Wicket longer admire do barton vanity itself do in it.</p>
+            </div>
+            <div class="text-center">
+                <img class="mx-auto" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/category/icon2.png" alt="" />
+                <h5 class="text-[#14183e] text-xl font-semibold pb-5">Best Flights</h5>
+                <p class="text-[#5e6282] text-[16px] font-semibold">Engrossed listening. Park gate sell they west hard for the.</p>
+            </div>
+            <div class="text-center">
+                <img class="mx-auto" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/category/icon3.png" alt="" />
+                <h5 class="text-[#14183e] text-xl font-semibold pb-5">Local Events</h5>
+                <p class="text-[#5e6282] text-[16px] font-semibold">Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
+            </div>
+            <div class="text-center">
+                <img class="mx-auto" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/category/icon4.png" alt="" />
+                <h5 class="text-[#14183e] text-xl font-semibold pb-5">Customization</h5>
+                <p class="text-[#5e6282] text-[16px] font-semibold">We deliver outsourced aviation services for military customers</p>
+            </div>
+        </div>
+        <!--Top Selling-->
+        <div class="container mx-auto text-center pt-30 px-5">
+            <p class="text-[#5e6282] text-[18px] font-semibold">Top Selling</p>
+            <h2 class="text-[#14183e] text-4xl lg:text-5xl font-bold font-serif">Top Destinations</h2>
+        </div>
+
+        <div class="container mx-auto flex flex-col gap-8 lg:flex-row md:flex-row justify-between items-center pt-20 px-5">
+            <div class="border-0 flex-1 shadow-[(0, 0, 0, 0.02)] shadow-2xl rounded-3xl overflow-hidden">
+                <img class="w-full" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/dest/dest1.jpg" alt="" />
+                <div class="flex justify-between items-center p-3">
+                    <h6 class="text-[#5e6282] hover:text-[#f1a501] duration-300 cursor-pointer text-xl font-semibold">Rome, Italty</h6>
+                    <p class="text-[#5e6282] cursor-pointer text-xl font-semibold">$5,42k</p>
+                </div>
+                <div class="flex items-center gap-2 p-3">
+                    <a class="fa-solid fa-location-arrow cursor-pointer"></a>
+                    <p class="text-[#5e6282] text-[16px] font-semibold cursor-pointer">10 Days Trip</p>
+                </div>
+            </div>
+            <div class="border-0 flex-1 shadow-[(0, 0, 0, 0.02)] shadow-2xl rounded-3xl overflow-hidden">
+                <img class="w-full" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/dest/dest2.jpg" alt="" />
+                <div class="flex justify-between items-center p-3">
+                    <h6 class="text-[#5e6282] hover:text-[#f1a501] duration-300 cursor-pointer text-xl font-semibold">London, UK</h6>
+                    <p class="text-[#5e6282] cursor-pointer text-xl font-semibold">$4.2k</p>
+                </div>
+                <div class="flex items-center gap-2 p-3">
+                    <a class="fa-solid fa-location-arrow cursor-pointer"></a>
+                    <p class="text-[#5e6282] text-[16px] font-semibold cursor-pointer">12 Days Trip</p>
+                </div>
+            </div>
+            <div class="border-0 flex-1 shadow-[(0, 0, 0, 0.02)] shadow-2xl rounded-3xl overflow-hidden">
+                <img class="w-full" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/dest/dest3.jpg" alt="" />
+                <div class="flex justify-between items-center p-3">
+                    <h6 class="text-[#5e6282] hover:text-[#f1a501] duration-300 cursor-pointer text-xl font-semibold">Full Europe</h6>
+                    <p class="text-[#5e6282] cursor-pointer text-xl font-semibold">$15k</p>
+                </div>
+                <div class="flex items-center gap-2 p-3">
+                    <a class="fa-solid fa-location-arrow cursor-pointer"></a>
+                    <p class="text-[#5e6282] text-[16px] font-semibold cursor-pointer">28 Days Trip</p>
+                </div>
+            </div>
+        </div>
+        <!--Easy and Fast-->
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center pt-30 px-5 gap-8">
+            <div class="flex flex-col gap-10">
+                <div>
+                    <p class="text-[#5e6282] text-[18px] font-bold">Easy and Fast</p>
+                    <h1 class="text-[#14183e] text-4xl lg:text-5xl font-serif font-bold lg:w-[600px]">Book your next trip in 3 easy steps</h1>
+                </div>
+                <div class="flex items-center gap-5">
+                    <div class="border-0 rounded-[10px] bg-[#f1a501] p-3">
+                        <a class="fa-solid fa-crop-simple text-white"></a>
+                    </div>
+                    <div>
+                        <h6 class="text-[#5e6282] text-[18px] font-bold">Choose Destination</h6>
+                        <p class="text-[#5e6282] lg:w-[300px]">Choose your favourite place. No matter where you travel inside the World.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <div class="border-0 rounded-[10px] bg-[#df6951] p-3">
+                        <a class="fa-solid fa-person-swimming text-white"></a>
+                    </div>
+                    <div>
+                        <h6 class="text-[#5e6282] text-[18px] font-bold">Make Payment</h6>
+                        <p class="text-[#5e6282] lg:w-[300px]">After find your perfect spot, make your payment and get ready to travel.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5">
+                    <div class="border-0 rounded-[10px] bg-[#006380] p-3">
+                        <a class="fa-solid fa-taxi text-white"></a>
+                    </div>
+                    <div>
+                        <h6 class="text-[#5e6282] text-[18px] font-bold">Reach Airport on Selected Date</h6>
+                        <p class="text-[#5e6282] lg:w-[300px]">Lastly, you have to arrive at the airport on time and enjoy the vacation.</p>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="border-0 shadow-[rgba(0, 0, 0, 0.02)] shadow-2xl bg-white flex flex-col gap-3 rounded-2xl p-5">
+                <img class="rounded-2xl" src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/steps/booking-img.jpg" alt="" />
+                <h6 class="text-[#14183e] text-[18px] font-semibold">Trip To Greece</h6>
+                <p class="text-[#5e6282] text-[16px]">14-29 June | by Robbin joseph</p>
+                <div class="flex flex-row gap-5">
+                    <span class="border-0 bg-[#eeeeee] w-8 h-8 rounded-[50%] flex justify-center items-center"><a class="fa-solid fa-leaf text-[#84829a] text-[13px]"></a></span>
+                    <span class="border-0 bg-[#eeeeee] w-8 h-8 rounded-[50%] flex justify-center items-center"><a class="fa-regular fa-map text-[#84829a] text-[13px]"></a></span>
+                    <span class="border-0 bg-[#eeeeee] w-8 h-8 rounded-[50%] flex justify-center items-center"><a class="fa-solid fa-paper-plane text-[#84829a] text-[13px]"></a></span>
+                </div>
+                
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                        <a class="fa-regular fa-building text-[#84829a]"></a>
+                        <p class="text-[#5e6282] text-[18px]">24 people going</p>
+                    </div>
+                    <div>
+                        <a class="fa-regular fa-heart text-[#3e4ec0]"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Testimonials-->
+        <div class="container mx-auto flex flex-col gap-5 lg:flex-row justify-between items-center pt-30 px-5">
+            <div>
+                <p class="text-[#5e6282] text-[18px] font-bold">Testimonials</p>
+                <h1 class="text-[#14183e] text-4xl lg:text-5xl font-bold font-serif lg:w-[500px]">What people say about Us.</h1>
+            </div>
+            <div>
+                <div class="swiper mySwiper h-[200px] border-0 shadow-[rgba(0, 0, 0, 0.02)] shadow-2xl rounded-2xl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide p-6">
+                            <p class="text-[#5e6282] text-[16px] lg:text-[18px] font-semibold">"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."</p>
+                            <div class="pt-5">
+                                <h6 class="text-[#5e6282] text-[20px] font-semibold">Mike taylor</h6>
+                                <p class="text-[#5e6282] text-[16px] font-semibold">Lahore, Pakistan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-6">
+                            <p class="text-[#5e6282] text-[16px] lg:text-[18px] font-semibold">"On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."</p>
+                            <div class="pt-5">
+                                <h6 class="text-[#5e6282] text-[18px] lg:text-[20px] font-semibold">Kelly Willium</h6>
+                                <p class="text-[#5e6282] text-[14px] lg:text-[16px] font-semibold">Khulna, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide p-6">
+                            <p class="text-[#5e6282] text-[16px] lg:text-[18px] font-semibold">"Jadoo is recognized as one of the finest travel agency in the world. When it came to planning a trip, I found them to be dependable."</p>
+                            <div class="pt-5">
+                                <h6 class="text-[#5e6282] text-[18px] lg:text-[20px] font-semibold">Thomas Wagon</h6>
+                                <p class="text-[#5e6282] text-[14px] lg:text-[16px] font-semibold">CEO of Red Button</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-5 justify-items-center pt-30 px-5">
+            <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/1.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/2.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/3.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/4.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000"><img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/partner/5.png" alt=""></div>
+        </div>
+        <!--Form-->
+        <div class="container mx-auto flex flex-col gap-10 justify-center items-center my-30 bg-[#f9f6fd] py-30 px-5 rounded-tl-[100px] rounded-bl-[20px] rounded-br-[20px] rounded-tr-[20px]">
+            <h3 class="text-[#5e6282] text-2xl lg:text-3xl lg:w-[800px] text-center font-bold">Subscribe to get information, latest news and other interesting offers about Cobham</h3>
+            <div class="flex flex-col gap-5 lg:flex-row items-center">
+                <input class="bg-white w-full lg:w-[300px] py-3 px-2 outline-0 rounded-[10px] text-[#5e6282]" type="email" placeholder="📧 Enter email"/>
+                <button class="border-0 w-[70%] lg:w-[150px] py-3 bg-gradient-to-b from-[#FF946D] to-[#FF7D68] text-white rounded-[10px]">Subscribe</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between px-5 gap-10">
+            <div class="flex flex-col gap-3">
+                <h3 class="text-[#181e4b] text-4xl font-semibold">Jadoo.</h3>
+                <p class="text-[#5e6282] text-[16px] lg:w-[300px] font-semibold">Book your trip in minute, get full Control for much longer.</p>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h3 class="text-[#080809] text-2xl font-bold">Company</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">About</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Careers</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Mobile</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h3 class="text-[#080809] text-2xl font-bold">Contact</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Help/FAQ</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Press</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-3">
+                <h3 class="text-[#080809] text-2xl font-bold">More</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Airlinefees</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Airline</a></li>
+                    <li><a class="text-[#5e6282] hover:text-[#f1a501] duration-300 font-semibold text-[18px]" href="">Low fare tips</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-row gap-5">
+                    <span class="border-0 shadow-[(0, 0, 0, 0.1)] shadow-xl bg-white hover:bg-[#3c5a99] hover:text-white duration-300 w-10 h-10 rounded-[50%] flex justify-center items-center"><a class="fa-brands fa-facebook-f text-[12px]"></a></span>
+                    <span class="border-0 shadow-[(0, 0, 0, 0.1)] shadow-xl bg-white hover:bg-[#f08bac] hover:text-white duration-300 w-10 h-10 rounded-[50%] flex justify-center items-center"><a class="fa-brands fa-instagram text-[12px]"></a></span>
+                    <span class="border-0 shadow-[(0, 0, 0, 0.1)] shadow-xl bg-white hover:bg-[#1da1f2] hover:text-white duration-300 w-10 h-10 rounded-[50%] flex justify-center items-center"><a class="fa-brands fa-twitter text-[12px]"></a></span>
+                </div>
+                <h3 class="text-[#5e6282] text-[20px] font-semibold">Discover our app</h3>
+                <div class="flex gap-3">
+                    <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/play-store.png" alt="" />
+                    <img src="https://themewagon.github.io/jadoo/v1.0.0/assets/img/apple-store.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <p class="text-[#5e6282] text-[14px] font-semibold text-center pt-20 pb-10 px-5">All rights reserved@jadoo.co</p>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  <script src="App.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
+</body>
+</html>
